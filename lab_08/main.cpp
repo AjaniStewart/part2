@@ -11,14 +11,21 @@ int main()
 
 //testing removeLeadSpaces() fucntion
     while(getline(std::cin, line)){
-        result = removeLeadingSpaces(line);
-
         if(line.find('{') && first){
-            std::cout << value<< " "<<result << std::endl;
+            //indents code for value amount of time
+            for(int i = 0; i < value; i++){
+                result += "    ";
+            }
+            //builds the string
+            result += removeLeadingSpaces(line) + '\n';
+
+            //updates value depending on how many brackets 
+            //there are
             value = countChar(line, '{');
             
         }
     }
+    std::cout << result << std::endl;
     /*
     while(getline(std::cin,line))
     {
