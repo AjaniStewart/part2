@@ -1,6 +1,9 @@
 #include <string>
 #include <cctype>
 #include <iostream>
+#include "funcs.h"
+
+//I included the funcs.h file here so your code can properly build
 
 std::string removeLeadingSpaces(std::string line)
 {
@@ -15,12 +18,17 @@ std::string removeLeadingSpaces(std::string line)
 
 int countChar(std::string line, char c)
 {
-    int count = 0;
-    for (int i = 0; i < line.size(); ++i)
-    {
-        if (line[i] == c)
-            ++count;
+    int countChar(std::string line);
+    static int bracket = 0;
+
+    for(int i = 0; i < line.length(); i++){
+        if(line[i] == '{'){
+            bracket++;
+        }else if(line[i] == '}'){
+            bracket--;
+        }
     }
-    return count;
+    return bracket;
 }
+
 

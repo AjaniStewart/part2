@@ -1,0 +1,5 @@
+Code Comments
+
+/*
+I included  a Makefile to build program and bad-code.cpp to rough test it.
+*/
