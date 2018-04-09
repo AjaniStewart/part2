@@ -1,0 +1,19 @@
+Code Comments (BY : Shania Dhani)
+
+/*
+I included  a Makefile to build program and bad-code.cpp to 
+rough test your code.
+
+Your removeLeadSpaces function works as intended, however, 
+the countChar function does not retain it's value regarding
+the previous bracket count because the count is reinitialized
+every time it enters the function. 
+
+(At least that is one way of
+thinking about it). Because I used it this way, the variables I 
+are static variables from the storage class. 
+
+All other comments are in the program
+
+
+*/
